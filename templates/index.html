@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%block page_content%}
+
+<div class="row">
+  <div class="col-lg-1">
+
+  </div>
+  <div class="col-lg-8 row">
+    {% for item in items %}
+      <div class="col-lg-4">
+        <div class="card my-2">
+          <img class="card-img-top img-card" src="{{ item.image }}" alt="img">
+          <div class="card-body py-2">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <h6 class="price text-center">{{ item.price }} đ / kg</h6>
+            <div class="text-center">
+              <a href="#" class="btn btn-primary ">Xem</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="col-lg-3">
+    <h4>Đặt hàng</h4>
+    <form class="" method="post">
+      <div class="">
+        <label for="name">Họ và tên:</label>
+        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name" value="" placeholder="Họ và tên">
+        <small id="nameHelp" class="form-text text-muted">(* Bắt buộc)</small>
+      </div>
+      <div class="">
+        <label for="number">Số điện thoại:</label>
+        <input type="text" class="form-control" id="number" aria-describedby="numberHelp" name="number" value="" placeholder="Số điện thoại">
+        <small id="numberHelp" class="form-text text-muted">(* Bắt buộc)</small>
+      </div>
+      <div class="form-group">
+        <label for="seed">Mã giống cây muốn đặt:</label>
+        <input type="text" class="form-control" id="seed" aria-describedby="seedHelp" name="seed" value="" placeholder="#123 * (số lượng),#123 * (số lượng),...">
+        <small id="seedHelp" class="form-text text-muted">Có thể đặt nhiều cây theo mẫu (mã cây)*(số lượng)</small>
+      </div>
+      <div class="form-group" method="post">
+        <label for="seed">Địa chỉ:</label>
+        <input type="text" class="form-control" id="address" aria-describedby="addressHelp" name="address" value="" placeholder="#123">
+        <small id="addressHelp" class="form-text text-muted">(*Bắt buộc, ghi rõ nơi muốn ship đến)</small>
+      </div>
+      <button type="submit" name="button" onclick="except" class="btn btn-success text-center">Đặt cây</button>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+  funtion except() {
+    confirm("Chắc chắn bạn muốn đặt cây?");
+  }
+</script>
+{%endblock%}

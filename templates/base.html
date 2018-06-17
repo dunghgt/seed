@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="/static/js/bootstrap.mon.js"></script>
+    <script type="/static/js/jquery-3.2.1.min.js"></script>
+    <script type="/static/js/popper.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu|" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <div class="body">
+      <nav class="navbar bg-success navbar-expand-lg">
+        <a href="#" class="brand-img">
+          <i class="fab fa-pagelines font-4x"></i>
+        </a>
+        <a href="#" class="brand-name">CÂY TRỒNG</a>
+        <div class="contact">
+            <span class="icon-phone">
+              <i class="fas fa-phone font-phone"></i>
+            </span>
+            <span class="hotline">Điện thoại:</span>
+            <span class="contact-number">0123456789</span>
+            <p class="times">Giờ làm việc: 8h00 đến 20h00 hằng ngày</p>
+        </div>
+      </nav>
+      <nav class="navbar nav-under">
+        <a class="nav-link active  ml-auto" href="#">Giới thiệu</a>
+        <a class="nav-link" href="#">Sản phẩm</a>
+        <a class="nav-link" href="#">Kĩ thuật chăm sóc</a>
+        <a class="nav-link mr-auto" href="#">Liên hệ</a>
+      </nav>
+      {%block page_content%}
+      {%endblock%}
+      <footer class="bg-dark navbar">
+        <h6 class="text-light nav-item">Made by me</h6>
+        <h6 class="text-light nav-item">Partner: Google, Unplash</h6>
+      </footer>
+    </div>
+  </body>
+</html>
